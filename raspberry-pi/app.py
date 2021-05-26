@@ -1,49 +1,34 @@
-
-from flask import Flask, render_template, request
+from flask import Flask, redirect, url_for, render_template, request
 import time
 import paho.mqtt.client as mqtt
 from apscheduler.schedulers.background import BackgroundScheduler
 
 app = Flask(__name__)
 client = mqtt.Client()
-
-timeStamp = 0
+data = {}
 
 def parse_func():
 	timeStamp = time.time()
 	return (timeStamp)
 
-
 @app.route("/")
-def index():
-	timeStamp = parse_func()
-	client.publish('home/node1', 'GET_SENSOR_DATA')
-	templateData = {
-      'button': timeStamp,
-      'senPIR': timeStamp,
-      'ledRed': timeStamp,
-      'ledYlw': timeStamp,
-      'ledGrn': timeStamp,
-      }
-	return render_template('index.html', **templateData)
-
-# The function below is executed when someone requests a URL with the actuator name and action in it:
+def home():
+    client.publish('home/node1', 'GET_SENSOR_DATA')
+    return render_template("index.html", data=data)
 
 
-@app.route("/<deviceName>/<action>")
-def action(deviceName, action):
+@app.route("/getjson")
+def json():
+    import json
+    with open('static/js/data.json') as json_file:
+        data = json.load(json_file)
+    return data
 
-	client.publish('home/node1', 'GET_SENSOR_DATA')
-	timeStamp = parse_func()
 
-	templateData = {
-	  'button': timeStamp,
-      'senPIR': timeStamp,
-      'ledRed': timeStamp,
-      'ledYlw': timeStamp,
-      'ledGrn': timeStamp,
-	}
-	return render_template('index.html', **templateData)
+@app.route("/admin")
+def admin():
+    return redirect(url_for("static"))
+
 
 
 def on_connect(client, userdata, flags, rc):
@@ -81,9 +66,10 @@ print('Script is running, press Ctrl-C to quit...')
     # client.publish('home/node1', 'GET_SENSOR_DATA')
 
 if __name__ == "__main__":
-	scheduler = BackgroundScheduler()
+    scheduler = BackgroundScheduler()
 	scheduler.add_job(parse_func, 'interval', seconds=1)
 	scheduler.start()
 	app.jinja_env.auto_reload = True
 	app.config['TEMPLATES_AUTO_RELOAD'] = True
+
 	app.run(host='0.0.0.0', port=5000, debug=True)

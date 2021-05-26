@@ -1,0 +1,58 @@
+{
+	"data": [{
+			"date": "5/26/2021",
+			"time": "17",
+			"data": {
+				"light": 30,
+				"dry": 40,
+				"ph": 10,
+				"relay_ctrl": "ON",
+				"node": "Device Not Connected"
+			}
+		},
+		{
+			"date": "5/26/2021",
+			"time": "15",
+			"data": {
+				"light": 265,
+				"dry": 126,
+				"ph": 50,
+				"relay_ctrl": "OFF",
+				"node": "Device Connected"
+			}
+		},
+		{
+			"date": "5/26/2021",
+			"time": "18",
+			"data": {
+				"light": 30,
+				"dry": 40,
+				"ph": 10,
+				"relay_ctrl": "ON",
+				"node": "Device Not Connected"
+			}
+		},
+		{
+			"date": "6/26/2021",
+			"time": "01",
+			"data": {
+				"light": 30,
+				"dry": 40,
+				"ph": 10,
+				"relay_ctrl": "ON",
+				"node": "Connected"
+			}
+		},
+		{
+			"date": "6/26/2021",
+			"time": "02",
+			"data": {
+				"light": 30,
+				"dry": 40,
+				"ph": 10,
+				"relay_ctrl": "OFF",
+				"node": "Connected"
+			}
+		}
+	]
+}

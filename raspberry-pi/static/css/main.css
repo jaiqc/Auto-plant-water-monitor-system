@@ -1,0 +1,86 @@
+/* Split the screen in half */
+.split {
+    /* height: 100%; */
+    /* width: 50%; */
+    float: left;
+    width: 60%;
+    min-width: 600px;
+    /* z-index: 1; */
+    /* top: 0; */
+    /* overflow-x: hidden; */
+    /* padding-top: 20px; */
+  }
+  
+  /* Control the left side */
+  .left {
+    float: left;
+    width: 20%;
+  }
+  
+  /* Control the right side */
+  .right {
+    float: right;
+    width: 20%;
+  }
+  
+  /* If you want the content centered horizontally and vertically */
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  /* /* Style the image inside the centered container, if needed */
+  .centered img {
+    width: 150px;
+    border-radius: 50%;
+  }
+
+  .title-wrapper {
+    position: relative;
+    left: -17%;
+    padding: 2vw;
+  }
+  
+  .device-box {
+    float: right;
+    width: 25%;
+    padding: 15px;
+    background-color: red;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    border-style: double;  
+    text-align: center;  
+  }
+
+  .relay-ctrl-box {
+    float: left;
+    width: 10%;
+    padding: 15px;
+    background-color: red;
+    font-size: 20px;
+    font-weight: bold;
+    border-style: double;  
+    color: white;
+    text-align: center;
+    left: 15px;
+    position: relative;
+  }
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.text-bold {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(99, 99, 99);
+  font-style: unset;
+  left: 15px;
+  position: relative;
+}
