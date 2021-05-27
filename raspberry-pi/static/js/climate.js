@@ -289,7 +289,7 @@ function load() {
 			setTimeout("location.reload(true);",timeoutPeriod);
 		}    
 		
-		window.onload = timedRefresh(500000); 
+		window.onload = timedRefresh(100000); 
 		// window.onload = timedRefresh(10000); 
 
 	});
