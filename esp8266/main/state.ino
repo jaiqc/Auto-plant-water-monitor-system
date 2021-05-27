@@ -24,6 +24,17 @@ void mqttState(byte* payload, unsigned int length)
   }
 }
 
+void nodeAliveStatus()
+{
+    DynamicJsonDocument doc(1024);
+
+    doc["cmd"] = "NODE_ONLINE_STATUS_GET";
+    doc["status"] = "I am alive";
+    char jsonChar[100];
+    serializeJson(doc, jsonChar);   
+    client.publish(mqttTopics, jsonChar);
+}
+
 void nodeState(NODE_OPERATION state)
 {
   switch(state)
@@ -32,7 +43,7 @@ void nodeState(NODE_OPERATION state)
       break;
 
     case NODE_ONLINE_STATUS:
-      client.publish(mqttTopics, "I am alive");
+      nodeAliveStatus();
       break;
 
     case NODE_SEND_SENSOR_DATA:

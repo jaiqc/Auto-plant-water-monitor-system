@@ -1,74 +1,37 @@
-from flask import Flask, redirect, url_for, render_template, request
+from flask import Flask, render_template, request
 import time
-import paho.mqtt.client as mqtt
 from apscheduler.schedulers.background import BackgroundScheduler
+from src.mqtt_task import mqtt_task
 
+# import p
+
+mqtt_task_obj = mqtt_task()
 app = Flask(__name__)
-client = mqtt.Client()
 data = ""
 
-
 def parse_func():
+    mqtt_task_obj.scheduler_task()
     timeStamp = time.time()
-    return (timeStamp)
-
+    return timeStamp
 
 @app.route("/")
 def home():
-    client.publish('home/node1', 'GET_SENSOR_DATA')
     return render_template("index.html", data=data)
-
 
 @app.route("/getjson")
 def json():
-    # import json
-    # with open('static/js/data.json') as json_file:
-    #     data = json_file
     file = open('static/js/data.json', "r")
     data = file.read()
     return data
-    
-
-def on_connect(client, userdata, flags, rc):
-    print("Connected with result code " + str(rc))
-    # Subscribing in on_connect() means that if we lose the connection and
-    # reconnect then subscriptions will be renewed.
-    client.subscribe("home/node1")
-
-# The callback for when a PUBLISH message is received from the server.
-
-
-def on_message(client, userdata, msg):
-    # Check if this is a message for the Pi LED.
-    if msg.topic == 'home/node1':
-
-        # Look at the message data and perform the appropriate action.
-        if msg.payload == b'GET_SENSOR_DATA':
-            print("data:")
-            print(msg.payload)
-            pass
-
-
-# Create MQTT client and connect to localhost, i.e. the Raspberry Pi running
-# this script and the MQTT server.
-
-client.on_connect = on_connect
-client.on_message = on_message
-client.connect('192.168.0.136', 1883, 60)
-# Connect to the MQTT server and process messages in a background thread.
-client.loop_start()
-# Main loop to listen for button presses.
-print('Script is running, press Ctrl-C to quit...')
-# while True:
-# # Look for a change from high to low value on the button input to
-# time.sleep(2)  # Delay for about 20 milliseconds to debounce.
-# client.publish('home/node1', 'GET_SENSOR_DATA')
 
 if __name__ == "__main__":
+
+    mqtt_task_obj.setup()
+    mqtt_task_obj.scheduler_task()
     scheduler = BackgroundScheduler()
-    scheduler.add_job(parse_func, 'interval', seconds=1)
+    scheduler.add_job(parse_func, 'interval', hours=1)
+    # scheduler.add_job(parse_func, 'interval', seconds=10)
     scheduler.start()
     app.jinja_env.auto_reload = True
     app.config['TEMPLATES_AUTO_RELOAD'] = True
-
     app.run(host='0.0.0.0', port=5000, debug=True)

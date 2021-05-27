@@ -1,58 +1,1258 @@
 {
-	"data": [{
-			"date": "5/27/2021",
-			"time": "10",
-			"data": {
-				"light": 30,
-				"dry": 40,
-				"ph": 10,
-				"relay_ctrl": "ON",
-				"node": "Device Not Connected"
-			}
-		},
-		{
-			"date": "5/26/2021",
-			"time": "15",
-			"data": {
-				"light": 265,
-				"dry": 126,
-				"ph": 50,
-				"relay_ctrl": "OFF",
-				"node": "Device Connected"
-			}
-		},
-		{
-			"date": "5/26/2021",
-			"time": "18",
-			"data": {
-				"light": 30,
-				"dry": 40,
-				"ph": 10,
-				"relay_ctrl": "ON",
-				"node": "Device Not Connected"
-			}
-		},
-		{
-			"date": "6/26/2021",
-			"time": "01",
-			"data": {
-				"light": 30,
-				"dry": 40,
-				"ph": 10,
-				"relay_ctrl": "ON",
-				"node": "Connected"
-			}
-		},
-		{
-			"date": "6/26/2021",
-			"time": "02",
-			"data": {
-				"light": 30,
-				"dry": 40,
-				"ph": 10,
-				"relay_ctrl": "OFF",
-				"node": "Connected"
-			}
-		}
-	]
+    "data": [
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 1,
+                "dry": 17,
+                "ph": 5,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "20",
+            "data": {
+                "light": 10,
+                "dry": 170,
+                "ph": 50,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 5,
+                "dry": 5,
+                "ph": 20,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 5,
+                "dry": 5,
+                "ph": 20,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 0,
+                "ph": 1,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 4,
+                "ph": 0,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 4,
+                "ph": 0,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 33,
+                "ph": 1,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 0,
+                "ph": 0,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 12,
+                "dry": 0,
+                "ph": 29,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 2,
+                "dry": 0,
+                "ph": 25,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 2,
+                "dry": 9,
+                "ph": 4,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 2,
+                "dry": 9,
+                "ph": 4,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 13,
+                "dry": 0,
+                "ph": 24,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 13,
+                "dry": 0,
+                "ph": 24,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 4,
+                "dry": 6,
+                "ph": 21,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 4,
+                "dry": 6,
+                "ph": 21,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 1,
+                "ph": 0,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 0,
+                "ph": 7,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 5,
+                "dry": 6,
+                "ph": 18,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 16,
+                "ph": 0,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 16,
+                "ph": 0,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 10,
+                "dry": 0,
+                "ph": 21,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 5,
+                "dry": 6,
+                "ph": 22,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 5,
+                "dry": 6,
+                "ph": 22,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 3,
+                "dry": 58,
+                "ph": 2,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 3,
+                "dry": 58,
+                "ph": 2,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 1,
+                "ph": 1,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 0,
+                "ph": 1,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 0,
+                "ph": 1,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 12,
+                "dry": 0,
+                "ph": 21,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 12,
+                "dry": 0,
+                "ph": 21,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 13,
+                "ph": 1,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 0,
+                "ph": 2,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 14,
+                "ph": 1,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 14,
+                "ph": 1,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 3,
+                "dry": 1,
+                "ph": 7,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 3,
+                "dry": 1,
+                "ph": 7,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 6,
+                "dry": 5,
+                "ph": 22,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 2,
+                "dry": 16,
+                "ph": 6,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 2,
+                "dry": 16,
+                "ph": 6,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 2,
+                "dry": 56,
+                "ph": 8,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 7,
+                "dry": 2,
+                "ph": 20,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 0,
+                "ph": 12,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 1,
+                "dry": 0,
+                "ph": 18,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 0,
+                "ph": 15,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 0,
+                "ph": 3,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 2,
+                "dry": 0,
+                "ph": 25,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 2,
+                "dry": 0,
+                "ph": 25,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 1,
+                "dry": 0,
+                "ph": 18,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 0,
+                "ph": 9,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 0,
+                "ph": 7,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 0,
+                "ph": 7,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 1,
+                "ph": 1,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 4,
+                "dry": 12,
+                "ph": 6,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 1,
+                "ph": 1,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 1,
+                "ph": 1,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 5,
+                "dry": 6,
+                "ph": 20,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 4,
+                "dry": 5,
+                "ph": 19,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 76,
+                "ph": 9,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 5,
+                "dry": 6,
+                "ph": 6,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 5,
+                "dry": 6,
+                "ph": 6,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 8,
+                "ph": 1,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 3,
+                "dry": 41,
+                "ph": 10,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 0,
+                "ph": 2,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 0,
+                "ph": 2,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 26,
+                "ph": 0,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 26,
+                "ph": 0,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 0,
+                "ph": 7,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 5,
+                "dry": 4,
+                "ph": 20,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 4,
+                "dry": 8,
+                "ph": 10,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 0,
+                "ph": 5,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 0,
+                "ph": 5,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 3,
+                "dry": 1,
+                "ph": 4,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 3,
+                "dry": 0,
+                "ph": 6,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 7,
+                "ph": 1,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 7,
+                "ph": 1,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 3,
+                "dry": 8,
+                "ph": 9,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 3,
+                "dry": 8,
+                "ph": 9,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 3,
+                "dry": 40,
+                "ph": 12,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 4,
+                "ph": 2,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 3,
+                "dry": 48,
+                "ph": 10,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 3,
+                "dry": 48,
+                "ph": 10,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 257,
+                "ph": 50,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 5,
+                "dry": 72,
+                "ph": 28,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 2,
+                "dry": 45,
+                "ph": 0,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 6,
+                "dry": 0,
+                "ph": 97,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 6,
+                "dry": 0,
+                "ph": 97,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 10,
+                "dry": 0,
+                "ph": 5,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 10,
+                "dry": 0,
+                "ph": 5,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 1,
+                "dry": 4,
+                "ph": 7,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 1,
+                "dry": 4,
+                "ph": 7,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 89,
+                "ph": 0,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 61,
+                "ph": 1,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 61,
+                "ph": 1,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 14,
+                "dry": 0,
+                "ph": 80,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 14,
+                "dry": 0,
+                "ph": 80,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 36,
+                "ph": 0,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 79,
+                "ph": 0,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 79,
+                "ph": 0,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 19,
+                "dry": 25,
+                "ph": 52,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 19,
+                "dry": 25,
+                "ph": 52,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 37,
+                "ph": 1,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 37,
+                "ph": 1,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 8,
+                "dry": 16,
+                "ph": 39,
+                "relay_ctrl": "ON",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 282,
+                "ph": 30,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 282,
+                "ph": 30,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 3,
+                "dry": 278,
+                "ph": 29,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 3,
+                "dry": 278,
+                "ph": 29,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 276,
+                "ph": 31,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 276,
+                "ph": 31,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 0,
+                "dry": 276,
+                "ph": 30,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 3,
+                "dry": 274,
+                "ph": 33,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        },
+        {
+            "date": "05/27/2021",
+            "time": "19",
+            "data": {
+                "light": 3,
+                "dry": 274,
+                "ph": 33,
+                "relay_ctrl": "OFF",
+                "node": "Device Connected"
+            }
+        }
+    ]
 }

@@ -30,7 +30,8 @@ void sendSensorData()
     
     doc["Ph"] = Ph;
     doc["Light"] = Light; 
-    doc["Mositure"] = Mositure;
+    doc["Moisture"] = Mositure;
+    doc["cmd"] = "GET_SENSOR_DATA";
     char jsonChar[100];
     serializeJson(doc, jsonChar);   
     client.publish(mqttTopics, jsonChar);

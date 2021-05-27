@@ -24,7 +24,12 @@ function load() {
 	$.getJSON("/getjson", function (data) {
 		data.data.forEach(element => {
 
-			if (currentDate.toLocaleDateString() == element.date) {
+			var dateStr = (currentDate.toLocaleDateString());
+			dateSplit = dateStr.split("/")
+			dateStr = dateStr.replace(dateSplit[0], "")
+			dateStr = ("0" + dateSplit[0]).slice(-2) + dateStr
+			console.log(element);
+			if (dateStr == element.date) {	
 				lightDataPoints.push(element.data.light);
 				dryDataPoints.push(element.data.dry);
 				phDataPoints.push(element.data.ph);
@@ -278,6 +283,13 @@ function load() {
 		} else {
 			relayCtrlSys.style.backgroundColor = "red";
 		}
+
+		function timedRefresh(timeoutPeriod) {
+			setTimeout("location.reload(true);",timeoutPeriod);
+		}    
+		
+		window.onload = timedRefresh(500000); 
+		// window.onload = timedRefresh(10000); 
 
 	});
 }
