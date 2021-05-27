@@ -18,6 +18,10 @@ void mqttState(byte* payload, unsigned int length)
   if(strncmp((char *)myData, RELAY_SYSTEM_OFF, strlen(RELAY_SYSTEM_OFF)) == 0) {
     nodeState(NODE_RELAY_SYSTEM_OFF);
   }
+
+  if(strncmp((char *)myData, NODE_ONLINE_STATUS_GET, strlen(NODE_ONLINE_STATUS_GET)) == 0) {
+    nodeState(NODE_ONLINE_STATUS);
+  }
 }
 
 void nodeState(NODE_OPERATION state)
@@ -25,6 +29,10 @@ void nodeState(NODE_OPERATION state)
   switch(state)
   {
     case NODE_IDLE:
+      break;
+
+    case NODE_ONLINE_STATUS:
+      client.publish(mqttTopics, "I am alive");
       break;
 
     case NODE_SEND_SENSOR_DATA:

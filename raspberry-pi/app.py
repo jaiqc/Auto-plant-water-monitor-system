@@ -7,9 +7,11 @@ app = Flask(__name__)
 client = mqtt.Client()
 data = {}
 
+
 def parse_func():
-	timeStamp = time.time()
-	return (timeStamp)
+    timeStamp = time.time()
+    return (timeStamp)
+
 
 @app.route("/")
 def home():
@@ -28,7 +30,6 @@ def json():
 @app.route("/admin")
 def admin():
     return redirect(url_for("static"))
-
 
 
 def on_connect(client, userdata, flags, rc):
@@ -61,15 +62,15 @@ client.loop_start()
 # Main loop to listen for button presses.
 print('Script is running, press Ctrl-C to quit...')
 # while True:
-    # # Look for a change from high to low value on the button input to
-    # time.sleep(2)  # Delay for about 20 milliseconds to debounce.
-    # client.publish('home/node1', 'GET_SENSOR_DATA')
+# # Look for a change from high to low value on the button input to
+# time.sleep(2)  # Delay for about 20 milliseconds to debounce.
+# client.publish('home/node1', 'GET_SENSOR_DATA')
 
 if __name__ == "__main__":
     scheduler = BackgroundScheduler()
-	scheduler.add_job(parse_func, 'interval', seconds=1)
-	scheduler.start()
-	app.jinja_env.auto_reload = True
-	app.config['TEMPLATES_AUTO_RELOAD'] = True
+    scheduler.add_job(parse_func, 'interval', seconds=1)
+    scheduler.start()
+    app.jinja_env.auto_reload = True
+    app.config['TEMPLATES_AUTO_RELOAD'] = True
 
-	app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
