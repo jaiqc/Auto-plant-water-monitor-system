@@ -5,7 +5,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 
 app = Flask(__name__)
 client = mqtt.Client()
-data = {}
+data = ""
 
 
 def parse_func():
@@ -21,16 +21,13 @@ def home():
 
 @app.route("/getjson")
 def json():
-    import json
-    with open('static/js/data.json') as json_file:
-        data = json.load(json_file)
+    # import json
+    # with open('static/js/data.json') as json_file:
+    #     data = json_file
+    file = open('static/js/data.json', "r")
+    data = file.read()
     return data
-
-
-@app.route("/admin")
-def admin():
-    return redirect(url_for("static"))
-
+    
 
 def on_connect(client, userdata, flags, rc):
     print("Connected with result code " + str(rc))
@@ -44,11 +41,12 @@ def on_connect(client, userdata, flags, rc):
 def on_message(client, userdata, msg):
     # Check if this is a message for the Pi LED.
     if msg.topic == 'home/node1':
-        print("data:")
-        print(msg.payload)
+
         # Look at the message data and perform the appropriate action.
-        # if msg.payload == b'ON':
-        #     pass
+        if msg.payload == b'GET_SENSOR_DATA':
+            print("data:")
+            print(msg.payload)
+            pass
 
 
 # Create MQTT client and connect to localhost, i.e. the Raspberry Pi running
