@@ -28,8 +28,9 @@ function load() {
 			dateSplit = dateStr.split("/")
 			dateStr = dateStr.replace(dateSplit[0], "")
 			dateStr = ("0" + dateSplit[0]).slice(-2) + dateStr
-			console.log(element);
+			
 			if (dateStr == element.date) {	
+				console.log(dateStr);
 				lightDataPoints.push(element.data.light);
 				dryDataPoints.push(element.data.dry);
 				phDataPoints.push(element.data.ph);
