@@ -34,4 +34,5 @@ if __name__ == "__main__":
     scheduler.start()
     app.jinja_env.auto_reload = True
     app.config['TEMPLATES_AUTO_RELOAD'] = True
+    app.config["CACHE_TYPE"] = "null"
     app.run(host='0.0.0.0', port=5000, debug=True)
