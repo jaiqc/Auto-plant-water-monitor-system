@@ -67,7 +67,7 @@ class monitor:
                 if device_connected_status: 
                     jsonData['node'] = "Device Connected"
                 else:
-                    print(self.node_online_status_payload)
+                    # print(self.node_online_status_payload)
                     jsonData['node'] = "Device Not Connected"
 
                 jsonUtils().construct_data(jsonData)
@@ -78,7 +78,7 @@ class monitor:
             pass
 
     def relaySystemMonitor(self, sensor_data):
-        print(sensor_data)
+        # print(sensor_data)
         if(sensor_data['Moisture'] < 100):
             self.client.publish(self.topic, 'RELAY_SYSTEM_ON')
             return True

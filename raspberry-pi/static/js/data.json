@@ -1,13 +1,13 @@
 {
-  "time": "2021-05-28 17:24:07.986131",
+  "time": "2021-05-28 17:51:57.150444",
   "data": [
     {
       "date": "05/28/2021",
       "hour": "17",
       "data": {
-        "light": 77,
-        "dry": 249,
-        "ph": 96,
+        "light": 72,
+        "dry": 216,
+        "ph": 78,
         "relay_ctrl": "OFF",
         "node": "Device Connected"
       }

@@ -73,5 +73,5 @@ class jsonUtils:
         time = datetime.datetime.now()
         jsonData["hour"] = (time.strftime("%H"))
         self.write_json(jsonData)
-        print("Append done")
+        # print("Append done")
         pass
