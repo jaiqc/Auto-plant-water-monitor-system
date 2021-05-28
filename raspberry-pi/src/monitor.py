@@ -80,11 +80,14 @@ class monitor:
     def relaySystemMonitor(self, sensor_data):
         print(sensor_data)
         if(sensor_data['Moisture'] < 100):
+            self.client.publish(self.topic, 'RELAY_SYSTEM_ON')
             return True
         
+        self.client.publish(self.topic, 'RELAY_SYSTEM_OFF')
         return False
 
     def scheduler_task(self, client):
+        self.client = client
         self.publish_node_status_get(client)
         self.publish_sensor_data_get(client)
         pass

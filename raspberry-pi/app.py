@@ -41,8 +41,8 @@ if __name__ == "__main__":
     mqtt_task_obj.setup()
     mqtt_task_obj.scheduler_task()
     
-    # scheduler.add_job(parse_func, 'interval', hours=1)
-    scheduler.add_job(parse_func, 'interval', seconds=30)
+    scheduler.add_job(parse_func, 'interval', hours=1)
+    # scheduler.add_job(parse_func, 'interval', seconds=30)
     scheduler.start()
     app.jinja_env.auto_reload = True
     app.config['TEMPLATES_AUTO_RELOAD'] = True

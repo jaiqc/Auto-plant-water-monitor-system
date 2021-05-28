@@ -1,7 +1,7 @@
 <html>
 
 <head>
-  <title>Integrated Test Summary</title>
+  <title>Plant Monitor System</title>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
@@ -36,6 +36,7 @@
 </head>
 
 <body onload="load()">
+
   <div style="width: 500pt">
   <figure>
     <!-- <img src="img/title.png" alt="Trulli" style="width:100%"> -->
@@ -92,6 +93,8 @@
   </div>
 
   <hr/>
+  <div id="timestamp" class="clearfix text-bold">
+  </div>
 
   <div style="width: 600px" class="split left">
     <div class="centered"></div>
@@ -119,6 +122,11 @@
     <script src="{{ url_for('static', filename='js/climate.js') }}"></script>
   </div>
 
+  <div style="width: 600px">
+    <label for="Current Json data">Current Json data:</label> 
+    <textarea id="current_json_data" rows="4" cols="50" readonly></textarea>
+  </div>
+  
 </body>
 
 <!-- <script> 

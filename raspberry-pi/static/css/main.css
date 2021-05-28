@@ -84,3 +84,8 @@
   left: 15px;
   position: relative;
 }
+
+.text-area {
+  position: absolute;
+  top: 150%;
+}

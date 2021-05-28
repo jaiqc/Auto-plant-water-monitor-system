@@ -4,6 +4,8 @@ var phChart = document.getElementById("phChart");
 var relayCtrlChart = document.getElementById("relayCtrlChart");
 var nodeConnection = document.getElementById("node1");
 var relayCtrlSys = document.getElementById("relay-ctrl-sys");
+var timeStamp = document.getElementById("timestamp");
+var currentJsonData = document.getElementById("current_json_data");
 
 var lightDataPoints = [],
 	dryDataPoints = [],
@@ -18,10 +20,13 @@ var lightDataPoints = [],
 	dryMaxValue = 300,
 	phMaxValue = 255,
 	nodeConnectedStatus = "home/node1 - NA",
-	relayCtrlSystemStatus = "NA";
+	relayCtrlSystemStatus = "NA",
+	timeStampValue = "",
+	currentJsonDataValue = "{}";
 
 function load() {
 	$.getJSON("/getjson", function (data) {
+		timeStampValue = data.time
 		data.data.forEach(element => {
 
 			var dateStr = (currentDate.toLocaleDateString());
@@ -39,7 +44,8 @@ function load() {
 				relayCtrlDataPoints.push(element.data.relay_ctrl.toUpperCase() == "ON" ? 1 : 0);
 			}
 
-			if (currentDate.getHours() == element.time) {
+			if (currentDate.getHours() == element.hour) {
+				currentJsonDataValue = element;
 				currentLightValue = element.data.light;
 				currentDryValue = element.data.dry;
 				currentPhValue = element.data.ph;
@@ -280,12 +286,16 @@ function load() {
 		}
 
 		relayCtrlSys.innerHTML = relayCtrlSystemStatus;
-
+		
 		if(relayCtrlSystemStatus == "ON") {
 			relayCtrlSys.style.backgroundColor = "#006400";
 		} else {
 			relayCtrlSys.style.backgroundColor = "red";
 		}
+		
+		timeStamp.innerHTML = timeStampValue;
+		// currentJsonData.value = "sdfsadfasdfsdfsd asdfasd";
+		document.getElementById("current_json_data").value = JSON.stringify(currentJsonDataValue);
 
 		function timedRefresh(timeoutPeriod) {
 			setTimeout("location.reload(true);",timeoutPeriod);
@@ -293,6 +303,6 @@ function load() {
 		
 		window.onload = timedRefresh(500000); 
 		// window.onload = timedRefresh(30000); 
-
+		
 	});
 }
