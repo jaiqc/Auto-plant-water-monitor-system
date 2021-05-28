@@ -15,7 +15,7 @@ var lightDataPoints = [],
 	currentPhValue = 0,
 	relayCtrlStatus = "NA",
 	lightMaxValue = 255,
-	dryMaxValue = 255,
+	dryMaxValue = 300,
 	phMaxValue = 255,
 	nodeConnectedStatus = "home/node1 - NA",
 	relayCtrlSystemStatus = "NA";
@@ -29,6 +29,8 @@ function load() {
 			dateStr = dateStr.replace(dateSplit[0], "")
 			dateStr = ("0" + dateSplit[0]).slice(-2) + dateStr
 			
+			console.log("dateStr:" + dateStr);
+			console.log("element.date"+ element.date);
 			if (dateStr == element.date) {	
 				console.log(dateStr);
 				lightDataPoints.push(element.data.light);
@@ -289,8 +291,8 @@ function load() {
 			setTimeout("location.reload(true);",timeoutPeriod);
 		}    
 		
-		window.onload = timedRefresh(100000); 
-		// window.onload = timedRefresh(10000); 
+		window.onload = timedRefresh(500000); 
+		// window.onload = timedRefresh(30000); 
 
 	});
 }
