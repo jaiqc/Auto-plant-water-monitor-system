@@ -12,7 +12,6 @@ data = ""
 
 
 def parse_func():
-    # print("refresh parse_func")
     mqtt_task_obj.scheduler_task()
     timeStamp = time.time()
     return timeStamp
@@ -28,7 +27,6 @@ def dir_last_updated(folder):
 def home():
     for job in scheduler.get_jobs():
         job.modify(next_run_time=datetime.datetime.now())
-        # print("refresh start")
 
     return render_template("index.html", data=data, last_updated=dir_last_updated('static'))
 

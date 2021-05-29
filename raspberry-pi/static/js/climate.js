@@ -7,41 +7,37 @@ var relayCtrlSys = document.getElementById("relay-ctrl-sys");
 var timeStamp = document.getElementById("timestamp");
 var currentJsonData = document.getElementById("current_json_data");
 
-var lightDataPoints = [],
-	dryDataPoints = [],
-	phDataPoints = [],
+var lightDataPoints = new Array(24),
+	dryDataPoints = new Array(24),
+	phDataPoints = new Array(24),
 	relayCtrlDataPoints = [],
 	currentDate = new Date(),
 	currentLightValue = 0,
 	currentDryValue = 0,
 	currentPhValue = 0,
 	relayCtrlStatus = "NA",
-	lightMaxValue = 255,
+	lightMaxValue = 125,
 	dryMaxValue = 300,
-	phMaxValue = 255,
+	phMaxValue = 125,
 	nodeConnectedStatus = "home/node1 - NA",
 	relayCtrlSystemStatus = "NA",
-	timeStampValue = "",
-	currentJsonDataValue = "{}";
+	timeStampValue = "";
 
 function load() {
 	$.getJSON("/getjson", function (data) {
-		timeStampValue = data.time
-		data.data.forEach(element => {
+		timeStampValue = data.time;
 
+		data.data.forEach(element => {
 			var dateStr = (currentDate.toLocaleDateString());
 			dateSplit = dateStr.split("/")
 			dateStr = dateStr.replace(dateSplit[0], "")
 			dateStr = ("0" + dateSplit[0]).slice(-2) + dateStr
 			
-			console.log("dateStr:" + dateStr);
-			console.log("element.date"+ element.date);
 			if (dateStr == element.date) {	
-				console.log(dateStr);
-				lightDataPoints.push(element.data.light);
-				dryDataPoints.push(element.data.dry);
-				phDataPoints.push(element.data.ph);
-				relayCtrlDataPoints.push(element.data.relay_ctrl.toUpperCase() == "ON" ? 1 : 0);
+				lightDataPoints[Number(element.hour)] = element.data.light;
+				dryDataPoints[Number(element.hour)] = element.data.dry;
+				phDataPoints[Number(element.hour)] = element.data.ph;
+				relayCtrlDataPoints[Number(element.hour)] = element.data.relay_ctrl.toUpperCase() == "ON" ? 1 : 0;
 			}
 
 			if (currentDate.getHours() == element.hour) {
@@ -54,6 +50,7 @@ function load() {
 			}
 		});
 
+		// Light chart data
 		var myChart = new Chart(lightChart, {
 			type: "line",
 			data: {
@@ -99,6 +96,7 @@ function load() {
 			}
 		});
 
+		// Dry chart data
 		var myChart = new Chart(dryChart, {
 			type: "line",
 			data: {
@@ -144,6 +142,7 @@ function load() {
 			}
 		});
 
+		// Ph chart data
 		var myChart = new Chart(phChart, {
 			type: "line",
 			data: {
@@ -189,6 +188,7 @@ function load() {
 			}
 		});
 
+		// Relay chart data
 		var myChart = new Chart(relayCtrlChart, {
 			type: "line",
 			data: {
@@ -234,6 +234,7 @@ function load() {
 			}
 		});
 
+		// Light current data
 		$('.light-current-value').knob({
 			angleArc: 250,
 			angleOffset: -125,
@@ -247,10 +248,7 @@ function load() {
 
 		$('.light-current-value').val(currentLightValue).trigger('change');
 
-		// ----------------------------------------
-		// Errors Detected
-		// ----------------------------------------
-
+		// Dry current data
 		$('.dry-current-value').knob({
 			angleArc: 250,
 			angleOffset: -125,
@@ -264,6 +262,7 @@ function load() {
 
 		$('.dry-current-value').val(currentDryValue).trigger('change');
 
+		// Ph current data
 		$('.ph-current-value').knob({
 			angleArc: 250,
 			angleOffset: -125,
@@ -277,7 +276,7 @@ function load() {
 
 		$('.ph-current-value').val(currentPhValue).trigger('change');
 
-
+		// Node connected status 
 		nodeConnection.innerHTML = nodeConnectedStatus;
 		if (nodeConnectedStatus == "Device Connected") {
 			nodeConnection.style.backgroundColor = "#006400";
@@ -285,6 +284,7 @@ function load() {
 			nodeConnection.style.backgroundColor = "red";
 		}
 
+		// Relay control system status
 		relayCtrlSys.innerHTML = relayCtrlSystemStatus;
 		
 		if(relayCtrlSystemStatus == "ON") {
@@ -292,17 +292,17 @@ function load() {
 		} else {
 			relayCtrlSys.style.backgroundColor = "red";
 		}
-		
-		timeStamp.innerHTML = timeStampValue;
-		// currentJsonData.value = "sdfsadfasdfsdfsd asdfasd";
-		document.getElementById("current_json_data").value = JSON.stringify(currentJsonDataValue);
 
+		// Time display
+		timeStamp.innerHTML = timeStampValue;
+		document.getElementById("current_json_data").value = JSON.stringify(currentJsonDataValue);
+		
 		function timedRefresh(timeoutPeriod) {
 			setTimeout("location.reload(true);",timeoutPeriod);
 		}    
 		
+		// Windows refers rate
 		window.onload = timedRefresh(500000); 
-		// window.onload = timedRefresh(30000); 
-		
+		// window.onload = timedRefresh(30000); 		
 	});
 }

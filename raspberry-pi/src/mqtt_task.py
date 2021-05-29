@@ -19,10 +19,8 @@ class mqtt_task:
 
     def on_message(self, client, userdata, msg):
         # Check if this is a message for the Pi LED.
-        # print(msg.payload)
         if msg.topic == self.topic:
             if str(msg.payload).find("cmd") > -1:
-                print(msg.payload)
                 self.monitor_obj.mqtt_on_msg_callback(str(msg.payload, 'utf-8'))
 
     def scheduler_task(self):

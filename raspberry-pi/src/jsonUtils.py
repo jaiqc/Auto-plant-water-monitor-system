@@ -47,9 +47,10 @@ class jsonUtils:
 
             # # Join new_dat3a with file_data
             file_data["data"].append(new_data)
+            
+            print(new_data)
 
             unique = { each["hour"] : each for each in file_data["data"] }.values()
-            # # print(list(unique))
             file_data["data"] = list(unique)
             file_data["time"] = str(datetime.datetime.now())
 
@@ -73,5 +74,5 @@ class jsonUtils:
         time = datetime.datetime.now()
         jsonData["hour"] = (time.strftime("%H"))
         self.write_json(jsonData)
-        # print("Append done")
+        print("Append done")
         pass

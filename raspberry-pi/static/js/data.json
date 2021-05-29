@@ -1,5 +1,5 @@
 {
-  "time": "2021-05-28 17:51:57.150444",
+  "time": "2021-05-29 12:01:45.829591",
   "data": [
     {
       "date": "05/28/2021",
@@ -30,6 +30,50 @@
         "light": 1,
         "dry": 223,
         "ph": 74,
+        "relay_ctrl": "OFF",
+        "node": "Device Connected"
+      }
+    },
+    {
+      "date": "05/28/2021",
+      "hour": "18",
+      "data": {
+        "light": 65,
+        "dry": 214,
+        "ph": 72,
+        "relay_ctrl": "OFF",
+        "node": "Device Connected"
+      }
+    },
+    {
+      "date": "05/29/2021",
+      "hour": "10",
+      "data": {
+        "light": 93,
+        "dry": 218,
+        "ph": 52,
+        "relay_ctrl": "OFF",
+        "node": "Device Connected"
+      }
+    },
+    {
+      "date": "05/29/2021",
+      "hour": "11",
+      "data": {
+        "light": 93,
+        "dry": 218,
+        "ph": 51,
+        "relay_ctrl": "OFF",
+        "node": "Device Connected"
+      }
+    },
+    {
+      "date": "05/29/2021",
+      "hour": "12",
+      "data": {
+        "light": 90,
+        "dry": 218,
+        "ph": 53,
         "relay_ctrl": "OFF",
         "node": "Device Connected"
       }
